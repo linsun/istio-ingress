@@ -7,7 +7,7 @@ spec:
   tls:
   - hosts:
     - xxxx.us-south.containers.mybluemix.net
-    secretName: secret
+    secretName: ssss
   rules:
   - host: xxxx.us-south.containers.mybluemix.net
     http:
