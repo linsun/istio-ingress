@@ -11,5 +11,5 @@ kubectl get secret ${secret_name} -o yaml | sed 's/default/istio-system/g' | kub
 Open the `plans/frontdoor-ingress.yaml` file and check if it is using the same region as your kubernetes cluster.  The default being used is us-east.  Change it to your region if needed, and deploy the `plans/frontdoor-ingress.yaml`:
 
 ```
-cat frontdoor-ingress.yml| sed 's/xxxx/${cluster_name}/g' | sed 's/ssss/${secret_name}/g' | kubectl -n istio-system create -f -
+cat frontdoor-ingress.yaml| sed 's/xxxx/${cluster_name}/g' | sed 's/ssss/${secret_name}/g' | kubectl -n istio-system create -f -
 ```
